@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lora Glow Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* حركة الخلفية - تدرج متحرك */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0; padding: 0;
+      background: linear-gradient(270deg, #f9d3d3, #f5c0c0, #e6a8a0, #f5c0c0);
+      background-size: 800% 800%;
+      animation: gradientBG 30s ease infinite;
+      text-align: center;
+      color: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .flower {
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      background-image: url('https://i.postimg.cc/yNqZyKjr/flower1.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.15;
+      animation: floatUpDown 12s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .flower1 {
+      left: 30%;
+      bottom: 50px;
+      width: 90px; height: 90px;
+      background-image: url('image/flower1.png');
+      animation-delay: 0s;
+    }
+
+    .flower2 {
+      left: 70%;
+      bottom: 250px;
+      width: 70px; height: 70px;
+      background-image: url('image/flower1.png');
+    }
+
+    .flower3 {
+      left: 30%;
+      bottom: 600px;
+      width: 60px; height: 60px;
+      background-image: url('image/flower1.png');
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.45;
+      }
+      50% {
+        transform: translateY(-40px) rotate(10deg);
+        opacity: 0.25;
+      }
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      max-width: 100%;
+      transform: scale(0.9);
+      animation: fadeInScale 0.8s forwards;
+      animation-delay: 0.5s;
+      margin: 0 auto 15px;
+      display: block;
+    }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-weight: 700;
+      font-size: 28px;
+      color: #384b43;
+    }
+
+    .desc {
+      font-size: 16px;
+      margin: 4px 0;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .link-btn {
+      display: block;
+      background: #384b43;
+      color: white;
+      padding: 10px 0;
+      border-radius: 30px;
+      text-decoration: none;
+      margin: 12px auto;
+      width: 90%;
+      max-width: 320px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 0;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      top: -6px; left: -6px; right: -6px; bottom: -6px;
+      border-radius: 40px;
+      background: linear-gradient(45deg, #e6a8a0, #f5c0c0, #f9d3d3);
+      filter: blur(8px);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    .link-btn:hover::before {
+      opacity: 1;
+    }
+
+    .link-btn:hover {
+      background: white;
+      color: #384b43;
+      border: 2px solid #384b43;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(230, 168, 160, 0.7);
+    }
+
+    .social-icons {
+      margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #fff, #fce4e4);
+      color: #e6a8a0;
+      font-size: 26px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(230, 168, 160, 0.3);
+      border: 2px solid #e6a8a0;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 0;
+    }
+
+    .social-icons a:hover {
+      background: #e6a8a0;
+      color: white;
+      transform: scale(1.2) rotate(5deg);
+      box-shadow: 0 6px 20px rgba(230, 168, 160, 0.7);
+      z-index: 1;
+    }
+
+    /* ====== استجابة الشاشات ====== */
+
+    /* شاشات صغيرة جدا (الموبايل) */
+    @media screen and (max-width: 380px) {
+      h1 {
+        font-size: 22px;
+      }
+      .desc {
+        font-size: 14px;
+      }
+      .link-btn {
+        font-size: 14px;
+        padding: 12px 0;
+        width: 95%;
+      }
+      .social-icons a {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+
+    /* شاشات صغيرة */
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 25px 15px;
+      }
+      .logo {
+        width: 120px;
+        margin-bottom: 12px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .desc {
+        font-size: 15px;
+      }
+      .link-btn {
+        max-width: 100%;
+        width: 100%;
+      }
+      .social-icons a {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+
+    /* شاشات متوسطة */
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      .container {
+        max-width: 400px;
+      }
+      .logo {
+        width: 130px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      .desc {
+        font-size: 16px;
+      }
+      .link-btn {
+        max-width: 280px;
+        font-size: 15px;
+      }
+      .social-icons a {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="flower flower1"></div>
+  <div class="flower flower2"></div>
+  <div class="flower flower3"></div>
+
+  <div class="container">
+    <!-- الشعار -->
+    <img src="image/loraglowup.png" alt="Lora Glow Up" class="logo" />
+
+    <!-- اسم الحساب والوصف -->
+    <h1>Lora Glow Up</h1>
+    <p class="desc">📍السعودية – توصيل لجميع المناطق</p>
+    <p class="desc">📦 توصيل سريع وآمن</p>
+    <p class="desc">✨منتجات أصلية 100%</p>
+
+    <!-- أيقونات السوشيال ميديا -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-snapchat"></i></a>
+    </div>
+
+    <!-- الأزرار -->
+    <div class="links">
+      <a href="#" class="link-btn">تواصل عبر WhatsApp</a>
+      <a href="#" class="link-btn">تابعنا على Instagram</a>
+      <a href="#" class="link-btn">تابعنا على TikTok</a>
+      <a href="#" class="link-btn">تابعنا على Snapchat</a>
+      <a href="#" class="link-btn">تابعنا على Facebook</a>
+      <a href="#" class="link-btn">تابعنا على X</a>
+      <a href="#" class="link-btn">زيارة متجرنا</a>
+    </div>
+  </div>
+</body>
+</html>
