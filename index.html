@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,14 +10,23 @@
   <style>
     /* حركة الخلفية - تدرج متحرك */
     @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     body {
       font-family: 'Cairo', sans-serif;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       background: linear-gradient(270deg, #f9d3d3, #f5c0c0, #e6a8a0, #f5c0c0);
       background-size: 800% 800%;
       animation: gradientBG 30s ease infinite;
@@ -47,7 +57,8 @@
     .flower1 {
       left: 30%;
       bottom: 50px;
-      width: 90px; height: 90px;
+      width: 90px;
+      height: 90px;
       background-image: url('image/flower1.png');
       animation-delay: 0s;
     }
@@ -55,22 +66,27 @@
     .flower2 {
       left: 70%;
       bottom: 250px;
-      width: 70px; height: 70px;
+      width: 70px;
+      height: 70px;
       background-image: url('image/flower1.png');
     }
 
     .flower3 {
       left: 30%;
       bottom: 600px;
-      width: 60px; height: 60px;
+      width: 60px;
+      height: 60px;
       background-image: url('image/flower1.png');
     }
 
     @keyframes floatUpDown {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0) rotate(0deg);
         opacity: 0.45;
       }
+
       50% {
         transform: translateY(-40px) rotate(10deg);
         opacity: 0.25;
@@ -154,7 +170,10 @@
     .link-btn::before {
       content: '';
       position: absolute;
-      top: -6px; left: -6px; right: -6px; bottom: -6px;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
       border-radius: 40px;
       background: linear-gradient(45deg, #e6a8a0, #f5c0c0, #f9d3d3);
       filter: blur(8px);
@@ -216,14 +235,17 @@
       h1 {
         font-size: 22px;
       }
+
       .desc {
         font-size: 14px;
       }
+
       .link-btn {
         font-size: 14px;
         padding: 12px 0;
         width: 95%;
       }
+
       .social-icons a {
         width: 30px;
         height: 30px;
@@ -236,20 +258,25 @@
       .container {
         padding: 25px 15px;
       }
+
       .logo {
         width: 120px;
         margin-bottom: 12px;
       }
+
       h1 {
         font-size: 24px;
       }
+
       .desc {
         font-size: 15px;
       }
+
       .link-btn {
         max-width: 100%;
         width: 100%;
       }
+
       .social-icons a {
         width: 30px;
         height: 30px;
@@ -262,28 +289,33 @@
       .container {
         max-width: 400px;
       }
+
       .logo {
         width: 130px;
       }
+
       h1 {
         font-size: 26px;
       }
+
       .desc {
         font-size: 16px;
       }
+
       .link-btn {
         max-width: 280px;
         font-size: 15px;
       }
+
       .social-icons a {
         width: 30px;
         height: 30px;
         font-size: 18px;
       }
     }
-
   </style>
 </head>
+
 <body>
   <div class="flower flower1"></div>
   <div class="flower flower2"></div>
@@ -299,26 +331,38 @@
     <p class="desc">📦 توصيل سريع وآمن</p>
     <p class="desc">✨منتجات أصلية 100%</p>
 
-    <!-- أيقونات السوشيال ميديا -->
     <div class="social-icons">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-x-twitter"></i></a>
-      <a href="#"><i class="fab fa-snapchat"></i></a>
+      <a href="https://instagram.com/loraglowup" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/00966503819492" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-whatsapp"></i></a>
+      <a href="https://www.tiktok.com/@lora.glowup" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61577110935204" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/LGlowup94371" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-x-twitter"></i></a>
+      <a href="https://www.snapchat.com/add/loraglowup" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-snapchat"></i></a>
     </div>
 
     <!-- الأزرار -->
     <div class="links">
-      <a href="#" class="link-btn">تواصل عبر WhatsApp</a>
-      <a href="#" class="link-btn">تابعنا على Instagram</a>
-      <a href="#" class="link-btn">تابعنا على TikTok</a>
-      <a href="#" class="link-btn">تابعنا على Snapchat</a>
-      <a href="#" class="link-btn">تابعنا على Facebook</a>
-      <a href="#" class="link-btn">تابعنا على X</a>
-      <a href="#" class="link-btn">زيارة متجرنا</a>
+      <a href="https://wa.me/00966503819492" class="link-btn" target="_blank" rel="noopener noreferrer">تواصل عبر
+        WhatsApp</a>
+      <a href="https://instagram.com/loraglowup" class="link-btn" target="_blank"
+        rel="noopener noreferrer">تابعنا على Instagram</a>
+      <a href="https://www.tiktok.com/@lora.glowup" class="link-btn" target="_blank"
+        rel="noopener noreferrer">تابعنا على TikTok</a>
+      <a href="https://www.snapchat.com/add/loraglowup" class="link-btn" target="_blank"
+        rel="noopener noreferrer">تابعنا على Snapchat</a>
+      <a href="https://www.facebook.com/profile.php?id=61577110935204" class="link-btn" target="_blank"
+        rel="noopener noreferrer">تابعنا على Facebook</a>
+      <a href="https://twitter.com/LGlowup94371" class="link-btn" target="_blank"
+        rel="noopener noreferrer">تابعنا على X</a>
+      <a href="https://loraglowup.com" class="link-btn" target="_blank" rel="noopener noreferrer">زيارة متجرنا</a>
     </div>
   </div>
 </body>
+
 </html>
